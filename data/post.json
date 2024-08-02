@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "668d5036969239728083a6f5"
+  },
+  "image": "../images/Skully.jpg",
+  "title": "My life update",
+  "username": "Skully",
+  "postDate": "28/05/2010",
+  "postText": "This is me in this world, full of individuals in their own path to victory and i strive to improve each and every single day of my life, though it may be challeneging",
+  "comments": 2,
+  "postID": 0
+},
+{
+  "_id": {
+    "$oid": "668d5036969239728083a6f6"
+  },
+  "image": "../images/Maximum Pain.png",
+  "title": "In pain",
+  "username": "Maximum Pain",
+  "postDate": "20/01/2020",
+  "postText": "I may or may not have taken too many painkillers...",
+  "comments": 2,
+  "postID": 1
+},
+{
+  "_id": {
+    "$oid": "668d5036969239728083a6f7"
+  },
+  "image": "../images/Dream Big Smith.jpg",
+  "title": "I'm about to Smile",
+  "username": "D.B. Smith",
+  "postDate": "10/03/2022",
+  "postText": "It is not too late for the single people. I have found my love one and I believe you can find one too",
+  "comments": 1,
+  "postID": 2
+},
+{
+  "_id": {
+    "$oid": "668d5036969239728083a6f8"
+  },
+  "image": "../images/Jesus.png",
+  "title": "Peace be with you all",
+  "username": "Jesus",
+  "postDate": "11/09/2023",
+  "postText": "1 like, 1 prayer",
+  "comments": 1,
+  "postID": 3
+},
+{
+  "_id": {
+    "$oid": "668d5036969239728083a6f9"
+  },
+  "image": "../images/Huh.jpg",
+  "title": "Facts",
+  "username": "Big Eyes",
+  "postDate": "28/08/2025",
+  "postText": "Facts, I smell",
+  "comments": 1,
+  "postID": 4
+},
+{
+  "_id": {
+    "$oid": "668d5036969239728283a6f9"
+  },
+  "image": "../images/Huh.jpg",
+  "title": "Facts",
+  "username": "Big Eyes",
+  "postDate": "28/08/2025",
+  "postText": "Facts, I smell",
+  "comments": 1,
+  "postID": 6
+}]

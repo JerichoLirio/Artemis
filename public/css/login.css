@@ -1,0 +1,117 @@
+body {
+    background-image: url('../images/Artemis_Background.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 120px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 35%;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.container > h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 90%;
+    background-color: #087830;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.InnerTitle {
+    color: white;
+    font-family: Inika, sans-serif;
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #087830;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.content > p {
+    color: white;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.form-group label {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-container label {
+    color: white;
+    font-size: 20px;
+}
+
+.submit {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}

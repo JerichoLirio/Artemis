@@ -1,0 +1,23 @@
+<body>
+    {{> header}}
+    <div class="content">
+        {{> sidebar}}
+        <div>
+            {{#if input}}
+                {{> input}}
+            {{/if}}
+
+            {{#if posts}}
+                {{#each posts}}
+                    {{> post}}
+                {{/each}}
+            {{else}}
+                {{#if editPost}}
+                    {{> editPost}}
+                {{else}}
+                    <p>Posts are empty</p>
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+</body>

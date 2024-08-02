@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "668d5003969239728083a6f0"
+  },
+  "username": "JerichoLirio",
+  "password": "HelloWorld123",
+  "userID": 0
+},
+{
+  "_id": {
+    "$oid": "668d5003969239728083a6f1"
+  },
+  "username": "Yssa",
+  "password": "HelloWorld",
+  "userID": 1
+},
+{
+  "_id": {
+    "$oid": "668d5003969239728083a6f2"
+  },
+  "username": "Raph",
+  "password": "WorldHello123",
+  "userID": 2
+},
+{
+  "_id": {
+    "$oid": "668d5003969239728083a6f3"
+  },
+  "username": "Frederick",
+  "password": "Minecraft1234",
+  "userID": 3
+}]

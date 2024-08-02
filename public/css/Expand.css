@@ -1,0 +1,341 @@
+body {
+    background-color: #222;
+    color: white;
+    margin: 0; 
+    padding-bottom: 120px; 
+    font-family: Helvetica, Arial, sans-serif; 
+}
+.top-rectangle {
+    width: 100%;
+    height: 70px;
+    background-color: #087830;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.logo-area {
+    color: white;
+    z-index: 2; 
+    position: relative; 
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.bottom-rectangle {
+    width: 100%; 
+    height: 50px; 
+    background-color: #087830; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.post-box textarea {
+    width: 30%; 
+    height: 40px;
+    padding: 10px 10px 10px 30px;  
+    margin: 50px auto 10px; 
+    display: block; 
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    resize: none; 
+    bottom: 0px;
+}
+
+.post-box button {
+    background-color: #fff;
+    color: #087830;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 0px;
+    position: relative; 
+    left: 63%;
+    transform: translateX(-50%); 
+    outline: none; 
+}
+
+.post-box button.clicked {
+    background-color: #087830; 
+    color: white; 
+}
+
+.additional-buttons {
+    position: absolute;
+    top: 140px; 
+    left: 10px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.horizontal-buttons {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    margin-bottom: 20px; 
+}
+
+.horizontal-buttons div:last-child {
+    margin-left: auto; 
+}
+
+.additional-buttons .vertical-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px; 
+}
+
+.additional-buttons button {
+    background-color: #fff;
+    color: #087830;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.additional-buttons button:hover {
+    background-color: #087830;
+    color: white;
+}
+
+.search-form {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: fixed; 
+    top: 3px;
+    left: 0;
+    right: 0;
+    z-index: 2; 
+}
+.search-form input[type="search"] {
+    background-color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+
+.search-form button.search-button {
+    background-color: white;
+    color: #087830; 
+    border: none;
+    padding: 5px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-top: 1px;
+}
+
+.search-form button.search-button.clicked {
+    background-color: #087830;
+    color: white;
+}
+
+.search-form button.search-button:hover {
+    background-color: #ccc;
+}
+
+.search-form input[type="search"]:focus {
+    outline: none;
+}
+
+.username {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+    margin-left: 10px; 
+}
+
+.horizontal-buttons div:last-child button {
+    margin-top: -20px; 
+}
+
+p{
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+    margin-top: -250px; 
+}
+
+
+.other-user-post {
+    width: 50%;
+    background-color: #444;
+    padding: 30px;
+    margin: 80px auto;
+    border-radius: 20px;
+    height: auto; 
+    top: 90 px;
+}
+
+.other-user-post h2 {
+    margin-top: 10px;
+}
+
+.user-post {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.user-post p {
+    margin: 0;
+}
+
+.comment {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 90%;
+}
+
+    .comment p {
+        margin: 0;
+    }
+
+    .comment-area {
+        color: white;
+        font-size: large;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-date {
+        font-size: 14px;
+    }
+
+
+    .thumbs {
+        background-color: transparent;
+    }
+    
+    .thumbs-up-button,
+    .thumbs-down-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .thumbs-up-button:hover,
+    .thumbs-down-button:hover {
+        background-color: transparent;
+    }
+    
+
+
+
+.button-container {
+    position: absolute;
+    bottom: -60px;
+    right: 10; 
+}
+
+.additional-buttons {
+    position: absolute;
+    top: 90px;
+  
+}
+
+.horizontal-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-buttons {
+    position: absolute;
+    top: 150px; 
+    left: 0; 
+}
+
+.vertical-button {
+    top: 30px;
+    margin-left: 70%;
+    
+}
+
+.round-image {
+    border-radius: 900%;
+    width: 45px; 
+    height: 50px; 
+}
+
+.user-icon {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+.comment-image {
+    border-radius: 50%;
+
+  }
+
+  .comment-image {
+    border-radius: 900%;
+    width: 45px; 
+    height: 50px;
+    right: -30px; 
+}
+
+.post-box{
+
+    border-radius: 1000px;
+    height: 150px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-box textarea {
+    width: 60%;
+    height: 50px;  
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    padding-top: 20px;
+}
+
+.post-box button {
+    background-color: #fff;
+    color: #087830;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 0px;
+    position: relative; 
+    left: 75%;
+    transform: translateX(-50%); 
+    outline: none; 
+}
+
+.post-box button.clicked {
+    background-color: #087830; 
+    color: white; 
+}

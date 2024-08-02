@@ -1,0 +1,35 @@
+<link href="./css/editprofile.css" rel="stylesheet" />
+<div class="header">
+    <strong>Artemis</strong>
+</div>
+
+<div class="sidebar-area">
+    <a href='/friends'><button class="sidebar-navigation">Friends</button></a>
+    <a href='/Settings'><button class="sidebar-navigation">Settings</button></a>
+    <a href='/'><button class="sidebar-navigation">Home</button></a>
+</div>
+
+<div class="main-content">
+    <div class="cover-photo">
+        <div class="profile-photo">
+            <img src="../images/icon-add-img.png" alt="Add Profile Photo">
+        </div>
+        <p class="username-below">{{user}}</p>
+    </div>
+
+    <form class="form" action="/updateUser" method="post">
+        <div class="input-row">
+        </div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="newUsername">
+        <center><button type="submit" class="SubmitButton">Save</button></center>
+    </form>
+
+    <form class="form" action="/updateBio" method="post">
+        <div class="input-row">
+        </div>
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="Bio"></textarea>
+        <center><button type="submit" class="SubmitButton">Save</button></center>
+    </form>
+</div>

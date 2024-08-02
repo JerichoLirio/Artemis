@@ -1,0 +1,112 @@
+body{
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 120px; 
+    font-family: Helvetica, Arial, sans-serif; 
+}
+.innerBody{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    width: 100%;
+    background-image: url("../images/Artemis_Background.png");
+    text-align: center;
+    color: white;
+    position: fixed;
+    margin-top: 0%;
+    border-style: solid;
+}
+.sidePanel{
+    width: 20%;
+    margin-top: 12%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    color: white;
+    border-radius: 20px;
+    background-color: #444;
+}
+button{
+background-color: #fff;
+color: #087830;
+width: 45%;
+height: 50px;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+border-radius: 30px;
+margin-left: 30%;
+margin-top: 7%;
+overflow: hidden;
+border-style: none;
+}
+button:hover{
+    background-color: #087830;
+    color: white;
+}
+.friendList{
+    width: 55%;
+    height: auto;
+    margin-top: 7%;
+}
+.activeNow{
+    width: 20%;
+    margin-top: 12%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20%;
+    border-style: solid;
+    border-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    background-color: #444;
+}
+.activeNow > h2{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.activeNow > p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: white;
+}
+.friendBorder{
+    width: 70%;
+    height: 100px;
+    background-color: #444;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+}
+.innerFriendBorder{
+    width: 100%;
+    height: 70px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+}
+.innerFriendBorder > img{
+    width: 13%;
+    border-radius: 1000px;
+    margin-left: 12%;
+}
+.innerFriendBorder > h2{
+    text-align: center;
+    color: white;
+    margin-left: 11%;
+}

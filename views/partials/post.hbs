@@ -1,0 +1,22 @@
+{{#posts}}
+<div class="other-user-post">
+    <img src="../images/{{username}}.jpg" alt="User Icon" class="user-icon">
+    <div class="user-info">
+        <a href="../html/{{username}}.html" style="color: white; text-decoration: none;">
+        <h2>{{title}}</h2>
+        </a>
+        <p class="username" style="margin-top: -90px; margin-left: 60px;">{{username}}<span class="post-date" style="font-size: 14px;">{{date}}</span></p>
+    </div>
+    <div class="user-post">
+        <p>{{content}}</p>
+        <p class="post-date" style="font-size: 14px;">Posted on: {{date}}</p>
+    </div>
+    <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+    </button>
+    <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+    </button>
+    <h3>Comments: {{comments}}</h3>
+</div>
+{{posts}}

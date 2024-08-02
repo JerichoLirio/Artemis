@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "668d5093969239728083a6fb"
+  },
+  "image": "../images/Wow.jpg",
+  "username": "Undermaker",
+  "commentDate": "29/05/2010",
+  "commentText": "Stay strong, Skully! You got this!",
+  "postID": 0
+},
+{
+  "_id": {
+    "$oid": "668d5093969239728083a6fc"
+  },
+  "image": "../images/Whoa.png",
+  "username": "Whoa",
+  "commentText": "Whoa Bravo!",
+  "commentDate": "29/05/2010",
+  "postID": 0
+},
+{
+  "_id": {
+    "$oid": "668d5093969239728083a6fd"
+  },
+  "image": "../images/Maximo.jpg",
+  "username": "Minimum Payne",
+  "commentText": "Why are you taking so much pills Maximum?",
+  "commentDate": "20/01/2020",
+  "postID": 1
+},
+{
+  "_id": {
+    "$oid": "668d5093969239728083a6fe"
+  },
+  "image": "../images/Maxmo.png",
+  "username": "Maxmo",
+  "commentText": "Stop finishing the whole bottle of painkillers!",
+  "commentDate": "21/01/2020",
+  "postID": 1
+},
+{
+  "_id": {
+    "$oid": "668d5093969239728083a6ff"
+  },
+  "image": "../images/Joe.jpg",
+  "username": "Joe",
+  "commentText": "So True!",
+  "commentDate": "11/02/2022",
+  "postID": 2
+},
+{
+  "_id": {
+    "$oid": "668d6879969239728083a71b"
+  },
+  "image": "../images/Chris.jpg",
+  "username": "Chris The Chistian",
+  "commentText": "AMEN!",
+  "commentDate": "11/02/2022",
+  "postID": 3
+},
+{
+  "_id": {
+    "$oid": "668d694c969239728083a71c"
+  },
+  "image": "../images/Wha.jpg",
+  "username": "Wideeyes",
+  "commentText": "Why are you in my reccomendations!",
+  "commentDate": "28/08/2025",
+  "postID": 4
+}]

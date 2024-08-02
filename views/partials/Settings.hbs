@@ -1,0 +1,68 @@
+<link href="./css/Settings.css" rel="stylesheet" />
+<div class="navbar">
+    <div class="innerNav">
+        <h1>Settings</h1>
+        <button data-target="userSettings">
+            <h2>User</h2>
+        </button>
+        <button data-target="themeSettings">
+            <h2>Theme</h2>
+        </button>
+        <button data-target="systemSettings">
+            <h2>System</h2>
+        </button>
+        <br><br>
+        <a href='/home'>
+            <button>
+                <h2>Back</h2>
+            </button>
+        </a>
+    </div>
+</div>
+
+<div id="userSettings" class="settingsPanel active">
+    <div class="innerSettings">
+        <h1>User Settings</h1>
+        <h3>Change Username: </h3>
+        <input type="text" placeholder="Enter Name" name="name" required>
+        <h3>Change Bio: </h3>
+        <input type="text" placeholder="Enter Bio" name="bio" required>
+        <h3>Change Profile Picture</h3>
+    </div>
+</div>
+
+<div id="themeSettings" class="settingsPanel">
+    <div class="innerSettings">
+        <h1>Theme Settings</h1>
+        <h3>Select Theme: </h3>
+        <h1></h1>
+    </div>
+</div>
+
+<div id="systemSettings" class="settingsPanel">
+    <div class="innerSettings">
+        <h1>System Settings</h1>
+        <h3>System Configuration: </h3>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.navbar button[data-target]');
+        const panels = document.querySelectorAll('.settingsPanel');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetPanel = button.getAttribute('data-target');
+
+                panels.forEach(panel => {
+                    if (panel.id === targetPanel) {
+                        panel.classList.add('active');
+                    } else {
+                        panel.classList.remove('active');
+                    }
+                });
+            });
+        });
+    });
+</script>

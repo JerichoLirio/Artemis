@@ -1,0 +1,208 @@
+<body>
+  <!-- Search form -->
+  <form class="search-form" action="#">
+    <input type="search" id="search" name="q" placeholder="Search.....">
+    <button class="search-button" type="button" onclick="handleClick()">Search</button>
+  </form>
+
+  <!-- Top rectangle with logo -->
+  <div class="top-rectangle">
+    <div class="logo-area">
+      <div></div>
+      <div class="space"></div>
+      <strong>Artemis</strong>
+    </div>
+  </div>
+
+  <!-- Post box for new messages -->
+  <div class="post-box">
+    <h2>Post Your Message</h2>
+    <textarea id="message" placeholder="What's on your mind User..."></textarea>
+    <button id="post-button" type="button" onclick="handlePost()">Post</button> 
+  </div>
+
+  <!-- Existing posts from other users -->
+  {{#each posts}}
+ <div class="other-user-post" id="{{_id}}">
+      <img src="{{image}}" alt="User Icon" class="user-icon">
+      <div class="user-info">
+        <a href="/post/{{_id}}" style="color: white; text-decoration: none;">
+          <h2>{{title}}</h2>
+        </a>
+        <p class="username" style="margin-top: -90px; margin-left: 60px;">{{username}}<span class="post-date" style="font-size: 14px;"></span></p>
+      </div>
+      <div class="user-post">
+        <p>{{truncateText postText}}</p>
+        <p class="post-date" style="font-size: 14px;"{{postDate}}</p>
+      </div>
+      <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+      </button>
+      <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+      </button>
+      <h3>Comments: {{comment}}</h3>
+  </div>
+  {{/each}}
+
+    <!-- This div will show when there are no search results -->
+    <div id="no-results-message" style="display: none;">
+      No posts match your search.
+    </div>
+  </div>
+
+  <!-- Bottom rectangle -->
+  <div class="bottom-rectangle"></div>
+
+  <!-- Additional buttons area -->
+  <div class="additional-buttons">
+    <div class="horizontal-buttons">
+      {{#if user}}
+        <a href='/profile'><img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="User Icon" class="round-image"></a>
+        <div class="username">{{user}}</div>
+        <div class="button-container">
+          <a href='/profile'><button onclick="handleEdit()">Edit</button></a>
+        </div>
+        <div class="vertical-buttons">
+          <div class="space"></div>
+          <div class="vertical-button">
+            <form action="/logout" method="post">
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+          <div class="space"></div>
+          <div class="vertical-button">
+            <a href='/friends'><button onclick="handleFriends()">Friends</button></a>
+          </div>
+          <div class="space"></div>
+          <div class="vertical-button">
+            <a href='/Settings'><button onclick="handleSettings()">Settings</button></a>
+          </div>
+        </div>
+      {{else}}
+        <div class="button-container">
+          <a href='/login'><button onclick="handleLogout()">Log in</button></a>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  <script>
+  async function handlePost() {
+    const message = document.getElementById('message').value;
+
+    // Split the message by the first newline character to get the title and post text
+    const [title, ...postTextArray] = message.split('\n');
+    const postText = postTextArray.join('\n');
+
+    const response = await fetch('/post', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ title, postText }),
+    });
+
+    if (response.ok) {
+      window.location.reload();
+    } else {
+      alert('Failed to post message');
+    }
+  }
+</script>
+
+  <!-- JavaScript -->
+  <!-- <script>
+    function handleClick() {
+      // Get the search input value
+      const searchValue = document.getElementById('search').value.toLowerCase();
+
+      // Get all the post elements
+      const posts = document.querySelectorAll('.other-user-post');
+
+      // Track if any posts match the search
+      let hasMatch = false;
+
+      // Iterate over each post
+      posts.forEach(post => {
+        // Get the text content of each post
+        const postContent = post.textContent.toLowerCase();
+
+        // Check if the search value is present in the post content
+        if (postContent.includes(searchValue)) {
+          // If it matches, display the post
+          post.style.display = 'block';
+          hasMatch = true;
+        } else {
+          // If it doesn't match, hide the post
+          post.style.display = 'none';
+        }
+      });
+
+      // Show or hide the no results message
+      const noResultsMessage = document.getElementById('no-results-message');
+      noResultsMessage.style.display = hasMatch ? 'none' : 'block';
+    }
+
+    function handlePost() {
+      // Get the post content from the textarea
+      const postContent = document.getElementById('message').value;
+
+      // Create a new post element
+      const newPost = document.createElement('div');
+      newPost.className = 'other-user-post';
+
+      const postId = `post-${Date.now()}`;
+
+      newPost.setAttribute('id', postId);
+
+      newPost.innerHTML = `
+        <div class="user-info">
+          <h2>{{user}}</h2>
+          <p class="username">{{user}}</p>
+        </div>
+        <div class="user-post">
+          <p id="${postId}-content">${postContent}</p>
+          <p class="post-date">Posted on: ${new Date().toLocaleDateString()}</p>
+        </div>
+        <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+          <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+        </button>
+        <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+          <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+        </button>
+        <div class="post-actions">
+          <button class="edit-button" type="button" onclick="handleEditPost('${postId}')">Edit</button>
+          <button class="delete-button" type="button" onclick="handleDeletePost('${postId}')">Delete</button>
+        </div>
+        <h3>Comments: 0</h3>
+      `;
+
+      const postsContainer = document.getElementById('user-posts');
+      postsContainer.insertBefore(newPost, postsContainer.firstChild);
+
+      document.getElementById('message').value = '';
+    }
+
+    function handleEditPost(postId) {
+      const postContentElement = document.getElementById(`${postId}-content`);
+      const currentContent = postContentElement.textContent;
+      const newContent = prompt("Edit your post:", currentContent);
+
+      if (newContent !== null && newContent.trim() !== '') {
+        postContentElement.textContent = newContent;
+      }
+    }
+
+    function handleDeletePost(postId) {
+      const confirmDelete = confirm("Are you sure you want to delete this post?");
+      if (confirmDelete) {
+        const postElement = document.getElementById(postId);
+        if (postElement) {
+          postElement.remove();
+        }
+      }
+    }
+  </script> -->
+</body>
+<link href="./css/home.css" rel="stylesheet" />

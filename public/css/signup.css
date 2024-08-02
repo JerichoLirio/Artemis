@@ -1,0 +1,144 @@
+.header{
+    width: 58%;
+    height: 85px;
+    border-radius: 23px;
+    position:relative;
+    font-family: Arial;
+    top: 10px;
+    border-style:ridge;
+    border-color: beige;
+    text-decoration: white;
+    overflow: hidden;
+}
+.header > h2{
+    position: relative;
+    top: -15px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+body {
+    background-image: url('../images/Artemis_Background.png');
+    display: inline;
+}
+body > p{
+    text-decoration: white;
+    font-family: Arial;
+    position: relative;
+}
+body > h4{
+    position: relative; 
+    top: 50px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    top: -100px;
+    width: 550px;
+    height: 600px;
+    border: 10px round #ccc;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 60%;
+    border-style:ridge;
+    border-color: beige;
+}
+.text-element{ 
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: -60px;
+} 
+.text-element > h3{
+    font-size: 33px;
+    font-family: sans-serif;
+    position: relative;
+    top: 240px;
+    left: -150px;
+    border: 0;
+    text-decoration: underline;
+}
+.form{
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    margin: auto; 
+    font-family: Sans-serif;
+    top: -20px;
+    flex-direction: column;
+    width: 300px;
+    margin: 0px;
+    
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+label{
+    flex: 2;
+    margin-right: 10px;
+}
+.container > img{
+    position: relative;
+    height: 40%;
+    width: 43%;
+    top: -30px;
+    left: 15%;
+    border-radius: 200%;
+    mix-blend-mode: multiply;
+}
+.header > img{
+    position: relative;
+    height:150px;
+    width: 155px;
+    top: -100px;
+    left: 50%px;
+    border-radius: 200%;
+    opacity: 0.5;
+}
+.message{
+    float: left;
+    display: inline;
+    margin-top: 27%; 
+    margin-left: 5%;
+    width: 49%;
+    background-color: beige;
+    border-radius: 20px;
+    opacity: 0.5;
+}
+.message > p{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: relative;
+    left: 15px;
+    color: black;
+}
+.imgContainer{
+    position: relative;
+    left: 70px;
+    height: 10vh;
+}
+.img2 > img{
+    position: relative;
+    width: 20%;
+    height: auto;
+    top:50px;
+    left: -30%;
+    border-radius:20px;
+    
+}
+.img3 > img{
+    position: relative;
+    width: 20%;
+    height: auto;
+    left: -52%;
+    top: -50px;
+    border-radius:20px;
+}
+input{
+    border-radius: 20px;
+    height: 30px;
+}

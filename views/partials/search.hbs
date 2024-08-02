@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="../css/Search.css">
+</head>
+
+<body>
+    <form class="search-form" action="#">
+        <input type="search" id="search" name="q" placeholder="Search.....">
+        <div class="filter-options">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="top">Top</option>
+                <option value="latest">Latest</option>
+            </select>
+        </div>
+        <button class="search-button" type="button" onclick="handleClick()">Search</button>
+    </form>
+
+    
+
+    <div class="top-rectangle"></div>
+
+<div class="additional-buttons">
+    <div class="horizontal-buttons">
+        <img src="images/icons8-user-24.png" alt="Thumbs Icon">
+        <div class="username">USERNAME</div>
+        <div style="margin-left: -150px; margin-top: 60px;"> 
+        <button onclick="handleEdit()">Edit</button>
+        <button onclick="handleLogout()">Log out</button>
+    </div>
+    </div>
+    <div class="vertical-buttons">
+        <button onclick="handleFriends()">Friends</button>
+        <button onclick="handleSettings()">Settings</button>
+        <button onclick="handleHome()">Home</button>
+    </div>
+</div>
+</body>
+</html>

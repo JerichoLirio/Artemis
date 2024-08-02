@@ -1,0 +1,63 @@
+ <link href="./css/profile.css" rel="stylesheet" />
+    <div class="header">
+            <strong>Artemis</strong>
+    </div>
+
+    <div class="sidebar-area">
+        <div class="sidebar-profile">
+            <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="User Icon">
+            <p class="sidebar-username">{{user}}</p>
+        </div>
+
+        <a href='/editprofile'><button class="sidebar-setting">Edit Profile</button></a>
+        <a href='/friends'><button class="sidebar-navigation">Friends</button></a>
+        <a href='/Settings'><button class="sidebar-navigation">Settings</button></a>
+        <a href='/'><button class="sidebar-navigation">Home</button></a>
+    </div>
+
+    <div class="main-content">
+        <div class="cover-photo">
+            <div class="profile-photo">
+                <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="User Icon">
+            </div>
+            <p class="username-below">{{user}}</p>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-button">Posts</div>
+
+        </div>
+
+        <div class="post-container">
+            <div class="post-content">
+                <p class="post-caption">{{Bio}}</p>
+            </div>
+        </div>
+    
+
+        {{#each posts}}
+ <div class="other-user-post" id="{{_id}}">
+      <img src="{{image}}" alt="User Icon" class="user-icon">
+      <div class="user-info">
+        <a href="/post/{{_id}}" style="color: white; text-decoration: none;">
+          <h2>{{title}}</h2>
+        </a>
+        <p class="username" style="margin-top: -90px; margin-left: 60px;">{{username}}<span class="post-date" style="font-size: 14px;"></span></p>
+      </div>
+      <div class="user-post">
+        <p>{{truncateText postText}}</p>
+        <p class="post-date" style="font-size: 14px;"{{postDate}}</p>
+      </div>
+      <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+      </button>
+      <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+      </button>
+      <h3>Comments: {{comment}}</h3>
+  </div>
+  {{/each}}
+    </div>
+
+    <div class="bottom-rectangle"></div>
+</body>

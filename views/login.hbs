@@ -1,0 +1,35 @@
+<div class="container">
+    <link href="./css/login.css" rel="stylesheet" />
+    <div class="title">
+        <div class="InnerTitle">
+            <h2>Artemis</h2>
+        </div>
+    </div>
+    <h3>Login</h3>
+    <div class="content">
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="RememberContainer">
+                <div class="checkbox-container">
+                    <input type="checkbox">
+                    <label>Remember me</label>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <p>Don't have an account? Sign up <a href="/signup">here</a></p>
+        <p>Continue without account? Click <a href="/">here</a></p>
+    </div>
+</div>
+
+
+

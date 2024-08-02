@@ -1,0 +1,72 @@
+  <link rel="stylesheet" href="../css/Expand.css">
+
+   <form class="search-form" action="#">
+    <input type="search" id="search" name="q" placeholder="Search.....">
+    <button class="search-button" type="button" onclick="handleClick()">Search</button>
+  </form>
+
+
+  <div class="top-rectangle">
+    <div class="logo-area">
+      <p>Artemis</p>
+    </div>
+  </div>
+
+
+
+<div class="other-user-post">
+    <!-- Post Content -->
+    <img src="{{post.image}}" alt="User Icon" class="user-icon">
+    <div class="user-info">
+        <h2>{{post.title}}</h2>
+        <p class="username" style="margin-top: -90px; margin-left: 60px;">{{post.username}}<span class="post-date" style="font-size: 14px;"></span></p>
+    </div>
+    <div class="user-post">
+        <p>{{post.postText}}</p>
+        <p class="post-date" style="font-size: 14px;">{{post.postDate}}</p>
+    </div>
+    <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+    </button>
+    <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+        <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+    </button>
+    <!-- Comments -->
+    <h3>Comments</h3>
+    <div class="post-box">
+        <h2>Post Your Message</h2>
+        <textarea id="message" placeholder="What's on your mind User..."></textarea>
+        <button id="post-button" type="button" onclick="handlePost('{{post.postID}}')">Post</button>
+    </div>
+    {{#each comments}}
+    <div class="comment">
+        <img src="{{image}}" alt="User Icon" class="comment-image">
+        <div class="comment-info">
+            <p class="comment-username">{{username}}</p>
+            <p>{{this.commentText}}</p>
+            <p class="post-date" style="font-size: 14px;">{{commentDate}}</p>
+            <button class="thumbs-up-button" type="button" name="like" style="margin-top: 10px;">
+                <img src="../images/icons8-thumbs-up-26.png" alt="Thumbs Up Icon">
+            </button>
+            <button class="thumbs-down-button" type="button" name="dislike" style="margin-top: 10px;">
+                <img src="../images/icons8-thumbs-down-26.png" alt="Thumbs Down Icon">
+            </button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<script>
+  async function handlePost(postID) {
+    const message = document.getElementById('message').value;
+
+    const response = await fetch('/comment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ commentText: message, postID }),
+    });
+  }
+</script>
+
